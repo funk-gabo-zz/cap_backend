@@ -1,7 +1,7 @@
 const store = require('./store')
 
 function addCap(user, client, platform, kam, online, address, date) {
-    if(!user || !client || !platform|| !kam|| !online|| !address) {
+    if(!user || !client || !platform|| !kam|| online===""|| !address) {
         console.log(online)
         return Promise.reject('invalid parameters')
     }

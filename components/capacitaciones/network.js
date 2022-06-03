@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/", function (req, res) {
   controller
-    .getCaps(req.body.name)
+    .getCaps()
     .then((data) => {
       response.success(req, res, data, 200);
     })
