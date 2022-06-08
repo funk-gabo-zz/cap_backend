@@ -8,6 +8,7 @@ const training =  require('../components/training/network')
 const client =  require('../components/client/network')
 const status =  require('../components/tstatus/network')
 const mode =  require('../components/tmode/network')
+const service =  require('../components/tservice/network')
 
 const routes = function (server) {
     server.use('/message', message)
@@ -20,6 +21,7 @@ const routes = function (server) {
     server.use('/client', client)
     server.use('/status', status)
     server.use('/mode', mode)
+    server.use('/service', service)
 }
 
 module.exports = routes

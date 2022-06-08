@@ -8,14 +8,13 @@ function addTrain(
   mode,
   assistance,
   serviceType,
-  contactEmail,
-  contactName,
-  contactPhone,
+  contactEmail = 'N/A',
+  contactName = 'N/A',
+  contactPhone = '9999',
   status,
   tkt,
   observations
 ) {
-  console.log(client, observations );
   if (
     !client ||
     !date ||
