@@ -56,13 +56,14 @@ function getTrains() {
   });
 }
 
-function updateTrain(id, train) {
+function updateTrain(id, status) {
   return new Promise(async (resolve, reject) => {
-    if (!id || !train) {
+    if (!id || !status) {
+      console.log(id, status)
       reject("invalid data");
       return false;
     }
-    const result = await store.update(id, train);
+    const result = await store.update(id, status);
 
     resolve(result);
   });

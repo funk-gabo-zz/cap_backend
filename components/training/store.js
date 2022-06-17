@@ -10,9 +10,9 @@ async function getTrainings() {
     return train
 }
 
-async function updateTraining(id, train) {
+async function updateTraining(id, status) {
     const foundTrain = await Model.findById(id)
-    foundTrain.name = train
+    foundTrain.status = status
     const newTrain = await foundTrain.save()
     return newTrain
 }

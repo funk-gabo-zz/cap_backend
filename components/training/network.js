@@ -16,7 +16,7 @@ router.get("/", function (req, res) {
 
 router.patch("/:id", function (req, res) {
   controller
-    .updateTrain(req.params.id, req.body.name)
+    .updateTrain(req.params.id, req.body.status)
     .then((data) => {
       response.success(req, res, data, 200);
     })
